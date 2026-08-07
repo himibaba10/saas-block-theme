@@ -1,0 +1,24 @@
+{
+  "name": "saas-block-theme",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "wp-scripts start src/block-variations.js",
+    "build": "wp-scripts build src/block-variations.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/himibaba10/saas-block-theme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himibaba10/saas-block-theme/issues"
+  },
+  "homepage": "https://github.com/himibaba10/saas-block-theme#readme",
+  "devDependencies": {
+    "@wordpress/blocks": "^15.25.0",
+    "@wordpress/scripts": "^34.0.0"
+  }
+}
