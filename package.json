@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "wp-scripts start src/block-variations.js",
-    "build": "wp-scripts build src/block-variations.js"
+    "start": "wp-scripts start",
+    "build": "wp-scripts build"
   },
   "repository": {
     "type": "git",
