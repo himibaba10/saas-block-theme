@@ -36,8 +36,27 @@
 
 /* Theme custom styles */
 
+.saas-faq__panel {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows 300ms ease;
+}
+
+.saas-faq__panel-inner {
+	overflow: hidden;
+	min-height: 0;
+}
+
+.saas-faq__item.is-open .saas-faq__panel {
+	grid-template-rows: 1fr;
+}
+
+.saas-faq__item.is-open .saas-faq__icon {
+	transform: rotate(45deg);
+}
+
 footer .footer-links {
-  list-style: none;
+	list-style: none;
 }
 
 footer a {

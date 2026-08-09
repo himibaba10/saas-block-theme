@@ -7,19 +7,20 @@
 
 declare(strict_types=1);
 
-if (!defined('ABSPATH')) {
+if (!defined('ABSPATH'))
 	exit;
-}
 
-/**
- * Register compiled blocks from /build.
- */
 function saas_theme_register_blocks(): void
 {
-	$hero_block = SAAS_THEME_DIR . '/build/hero-section';
+	$blocks = [
+		SAAS_THEME_DIR . '/build/hero-section',
+		SAAS_THEME_DIR . '/build/faq-section',
+	];
 
-	if (file_exists($hero_block . '/block.json')) {
-		register_block_type($hero_block);
+	foreach ($blocks as $block_path) {
+		if (file_exists($block_path . '/block.json')) {
+			register_block_type($block_path);
+		}
 	}
 }
 add_action('init', 'saas_theme_register_blocks');
