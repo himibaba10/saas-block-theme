@@ -35,7 +35,7 @@ function FaqHeadingEdit({
       heading: value
     }),
     placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('FAQ heading…', 'saas-block-theme'),
-    allowedFormats: []
+    allowedFormats: ['core/text-color']
   });
 }
 function FaqHeadingSave({
@@ -75,7 +75,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function FaqToggleIcon() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
-    className: "saas-faq__icon flex size-8 shrink-0 items-center justify-center rounded-full border border-border text-ink transition-transform duration-300 ease-out text-2xl",
+    className: "saas-faq__icon flex size-8 shrink-0 items-center justify-center rounded-full border border-border text-2xl text-ink transition-transform duration-300 ease-out group-[.is-open]:rotate-45",
     "aria-hidden": "true",
     children: "+"
   });
@@ -124,7 +124,7 @@ function FaqItemSave({
   answer
 }) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
-    className: "saas-faq__item rounded-2xl border border-border-soft bg-surface px-6 py-5",
+    className: "saas-faq__item group rounded-2xl border border-border-soft bg-surface px-6 py-5",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
       className: "m-0",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("button", {
@@ -138,10 +138,10 @@ function FaqItemSave({
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(FaqToggleIcon, {})]
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-      className: "saas-faq__panel",
+      className: "saas-faq__panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-[.is-open]:grid-rows-[1fr]",
       "aria-hidden": "true",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-        className: "saas-faq__panel-inner",
+        className: "saas-faq__panel-inner min-h-0 overflow-hidden",
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
           tagName: "p",
           className: "mt-3 mb-0 max-w-3xl text-[1.125rem] leading-6.5 text-muted",
