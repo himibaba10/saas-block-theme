@@ -7,9 +7,7 @@ import { HeroVisualSave } from './components/hero-visual-side';
 export default function save( { attributes } ) {
 	const {
 		eyebrow,
-		headingBefore,
-		headingHighlight,
-		headingAfter,
+		heading,
 		description,
 		primaryCtaText,
 		primaryCtaUrl,
@@ -36,9 +34,7 @@ export default function save( { attributes } ) {
 			<div className="saas-hero__inner">
 				<HeroContentSave
 					eyebrow={ eyebrow }
-					headingBefore={ headingBefore }
-					headingHighlight={ headingHighlight }
-					headingAfter={ headingAfter }
+					heading={ heading }
 					description={ description }
 					primaryCtaText={ primaryCtaText }
 					primaryCtaUrl={ primaryCtaUrl }

@@ -7,8 +7,8 @@
 ?>
 <!-- wp:group {"align":"full","className":"rs-section rs-cta","style":{"spacing":{"padding":{"top":"var:preset|spacing|70","bottom":"var:preset|spacing|70"}},"color":{"background":"var:preset|color|dark"}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull rs-section rs-cta has-dark-background-color has-background" style="padding-top:var(--wp--preset--spacing--70);padding-bottom:var(--wp--preset--spacing--70)"><!-- wp:group {"layout":{"type":"constrained","contentSize":"720px"},"className":"rs-cta__inner"} -->
-<div class="wp-block-group rs-cta__inner"><!-- wp:heading {"textAlign":"center","level":2,"textColor":"white","metadata":{"name":"CTA Heading","bindings":{"__default":{"source":"core/pattern-overrides"}}}} -->
-<h2 class="wp-block-heading has-text-align-center has-white-color has-text-color" id="cta">Ready to take control of your work?</h2>
+<div class="wp-block-group rs-cta__inner"><!-- wp:heading {"textAlign":"center","level":2,"textColor":"surface","metadata":{"name":"CTA Heading","bindings":{"__default":{"source":"core/pattern-overrides"}}}} -->
+<h2 class="wp-block-heading has-text-align-center has-surface-color has-text-color" id="cta">Ready to take control of your work?</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"align":"center","style":{"color":{"text":"#c8d0d1"}},"metadata":{"name":"CTA Text","bindings":{"__default":{"source":"core/pattern-overrides"}}}} -->

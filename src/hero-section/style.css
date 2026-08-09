@@ -73,16 +73,12 @@
 }
 
 .saas-hero__heading {
-  margin: 1.5rem 0 0;
-  font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
-  font-weight: 600;
-  line-height: 1.03;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
-}
-
-.saas-hero__heading-highlight {
-  color: var(--wp--preset--color--primary);
+	margin: 1.5rem 0 0;
+	font-size: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+	font-weight: 600;
+	line-height: 1.03;
+	letter-spacing: -0.03em;
+	text-wrap: balance;
 }
 
 .saas-hero__description {
@@ -118,13 +114,13 @@
 
 .saas-hero__btn--primary {
   background: var(--wp--preset--color--primary);
-  color: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--surface);
   box-shadow: var(--wp--preset--shadow--lift);
 }
 
 .saas-hero__btn--primary:hover {
   background: var(--wp--preset--color--primary-soft);
-  color: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--surface);
 }
 
 .saas-hero__btn--secondary {

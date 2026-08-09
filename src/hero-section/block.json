@@ -14,17 +14,9 @@
       "type": "string",
       "default": "Agentic operations, live now"
     },
-    "headingBefore": {
+    "heading": {
       "type": "string",
-      "default": "Run your company on an "
-    },
-    "headingHighlight": {
-      "type": "string",
-      "default": "autonomous"
-    },
-    "headingAfter": {
-      "type": "string",
-      "default": " control plane"
+      "default": "Run your company on an <mark style=\"background-color:rgba(0,0,0,0)\" class=\"has-inline-color has-primary-color\">autonomous</mark> control plane"
     },
     "description": {
       "type": "string",

@@ -9,9 +9,7 @@ import { HeroVisualEdit } from './components/hero-visual-side';
 export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const {
 		eyebrow,
-		headingBefore,
-		headingHighlight,
-		headingAfter,
+		heading,
 		description,
 		primaryCtaText,
 		primaryCtaUrl,
@@ -66,9 +64,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 				<div className="saas-hero__inner">
 					<HeroContentEdit
 						eyebrow={ eyebrow }
-						headingBefore={ headingBefore }
-						headingHighlight={ headingHighlight }
-						headingAfter={ headingAfter }
+						heading={ heading }
 						description={ description }
 						primaryCtaText={ primaryCtaText }
 						primaryCtaUrl={ primaryCtaUrl }
