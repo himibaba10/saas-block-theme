@@ -34,7 +34,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	}, [] );
 
 	const blockProps = useBlockProps( {
-		className: 'saas-hero',
+		className: 'saas-hero relative overflow-hidden text-ink',
 		id: 'top',
 	} );
 
@@ -61,7 +61,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			<section { ...blockProps }>
 				<HeroBackdrop />
 
-				<div className="saas-hero__inner">
+				<div className="relative mx-auto grid max-w-content items-center gap-14 px-section py-20 pb-24 lg:grid-cols-2 lg:pt-28">
 					<HeroContentEdit
 						eyebrow={ eyebrow }
 						heading={ heading }

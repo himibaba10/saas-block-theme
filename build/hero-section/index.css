@@ -1,1 +1,9 @@
-.saas-hero .block-editor-rich-text__editable{outline:none}.saas-hero__replace-image{background:var(--wp--preset--color--surface);border:0;border-radius:9999px;box-shadow:var(--wp--preset--shadow--soft);color:var(--wp--preset--color--ink);cursor:pointer;font-size:.75rem;font-weight:600;padding:.5rem .75rem;position:absolute;right:1rem;top:1rem;z-index:2}.saas-hero__btn-wrap{display:inline-flex;position:relative}.saas-hero__btn{cursor:pointer}
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[2].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[2].use[2]!./src/hero-section/editor.css ***!
+  \*********************************************************************************************************************************************************************************/
+.saas-hero .block-editor-rich-text__editable {
+	outline: none;
+}
+
+
+/*# sourceMappingURL=index.css.map*/

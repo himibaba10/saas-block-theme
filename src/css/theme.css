@@ -1,0 +1,50 @@
+/*
+ * Tailwind v4 — Preflight omitted so WordPress / theme.json base styles stay intact.
+ */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@source "../../templates";
+@source "../../parts";
+@source "../../patterns";
+@source "../../src";
+
+@theme {
+  --color-background: var(--wp--preset--color--background);
+  --color-surface: var(--wp--preset--color--surface);
+  --color-ink: var(--wp--preset--color--ink);
+  --color-muted: var(--wp--preset--color--muted);
+  --color-primary: var(--wp--preset--color--primary);
+  --color-primary-soft: var(--wp--preset--color--primary-soft);
+  --color-spark: var(--wp--preset--color--spark);
+  --color-dark: var(--wp--preset--color--dark);
+  --color-border: var(--wp--preset--color--border);
+  --color-border-soft: var(--wp--preset--color--border-soft);
+
+  --shadow-soft: var(--wp--preset--shadow--soft);
+  --shadow-lift: var(--wp--preset--shadow--lift);
+
+  --spacing-section: var(--wp--preset--spacing--section);
+
+  --text-x-small: var(--wp--preset--font-size--x-small);
+  --text-small: var(--wp--preset--font-size--small);
+  --text-large: var(--wp--preset--font-size--large, 1.125rem);
+
+  --max-width-content: var(--wp--style--global--content-size, 1170px);
+}
+
+/* Theme custom styles */
+
+footer .footer-links {
+  list-style: none;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--wp--preset--color--spark);
+}

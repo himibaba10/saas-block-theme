@@ -20,8 +20,8 @@ export function HeroContentEdit( {
 	isSelected,
 } ) {
 	return (
-		<div className="saas-hero__content">
-			<div className="saas-hero__eyebrow">
+		<div>
+			<div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-x-small font-medium tracking-[0.04em] text-primary uppercase">
 				<SparklesIcon />
 				<RichText
 					tagName="span"
@@ -36,7 +36,7 @@ export function HeroContentEdit( {
 
 			<RichText
 				tagName="h1"
-				className="saas-hero__heading"
+				className="mt-6 mb-0 text-[clamp(2.5rem,1.5rem+4vw,4.5rem)] font-semibold leading-[1.03] tracking-[-0.03em] text-balance"
 				value={ heading }
 				onChange={ ( value ) => setAttributes( { heading: value } ) }
 				placeholder={ __( 'Heading…', 'saas-block-theme' ) }
@@ -45,7 +45,7 @@ export function HeroContentEdit( {
 
 			<RichText
 				tagName="p"
-				className="saas-hero__description"
+				className="mt-6 mb-0 max-w-xl text-large leading-relaxed text-muted"
 				value={ description }
 				onChange={ ( value ) =>
 					setAttributes( { description: value } )
@@ -83,21 +83,21 @@ export function HeroContentSave( {
 	stats,
 } ) {
 	return (
-		<div className="saas-hero__content">
-			<div className="saas-hero__eyebrow">
+		<div>
+			<div className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-x-small font-medium tracking-[0.04em] text-primary uppercase">
 				<SparklesIcon />
 				<RichText.Content tagName="span" value={ eyebrow } />
 			</div>
 
 			<RichText.Content
 				tagName="h1"
-				className="saas-hero__heading"
+				className="mt-6 mb-0 text-[clamp(2.5rem,1.5rem+4vw,4.5rem)] font-semibold leading-[1.03] tracking-[-0.03em] text-balance"
 				value={ heading }
 			/>
 
 			<RichText.Content
 				tagName="p"
-				className="saas-hero__description"
+				className="mt-6 mb-0 max-w-xl text-large leading-relaxed text-muted"
 				value={ description }
 			/>
 

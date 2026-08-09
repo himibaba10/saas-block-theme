@@ -1,4 +1,4 @@
-import { registerBlockVariation } from '@wordpress/blocks';
+import { registerBlockStyle, registerBlockVariation } from '@wordpress/blocks';
 
 const primaryButtonAttributes = {
   className: 'btn-primary',
@@ -43,6 +43,43 @@ registerBlockVariation('core/group', {
   },
   isActive: ['tagName', 'className'],
   scope: ['inserter', 'transform'],
+});
+
+registerBlockVariation('core/paragraph', {
+  name: 'before-heading',
+  title: 'Before Heading',
+  description: 'Small uppercase label that sits above a heading.',
+  icon: 'editor-textcolor',
+  attributes: {
+    className: 'before-heading',
+    textColor: 'primary',
+    fontSize: 'x-small',
+    style: {
+      typography: {
+        textTransform: 'uppercase',
+        fontWeight: '600',
+        letterSpacing: 'var(--wp--custom--letter-spacing--before-heading)',
+      },
+      elements: {
+        link: {
+          color: {
+            text: 'var:preset|color|primary',
+          },
+        },
+      },
+    },
+    metadata: {
+      name: 'Before Heading',
+    },
+  },
+  isActive: (blockAttributes) =>
+    blockAttributes.className?.split(/\s+/).includes('before-heading'),
+  scope: ['inserter', 'transform', 'block'],
+});
+
+registerBlockStyle('core/paragraph', {
+  name: 'compact',
+  label: 'Compact',
 });
 
 registerBlockVariation('core/button', {

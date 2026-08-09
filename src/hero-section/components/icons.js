@@ -1,7 +1,7 @@
 export function SparklesIcon() {
 	return (
 		<svg
-			className="saas-hero__icon"
+			className="shrink-0"
 			xmlns="http://www.w3.org/2000/svg"
 			width="14"
 			height="14"
@@ -25,7 +25,7 @@ export function SparklesIcon() {
 export function ArrowRightIcon() {
 	return (
 		<svg
-			className="saas-hero__icon"
+			className="shrink-0"
 			xmlns="http://www.w3.org/2000/svg"
 			width="16"
 			height="16"

@@ -23,7 +23,7 @@ export default function save( { attributes } ) {
 	} = attributes;
 
 	const blockProps = useBlockProps.save( {
-		className: 'saas-hero',
+		className: 'saas-hero relative overflow-hidden text-ink',
 		id: 'top',
 	} );
 
@@ -31,7 +31,7 @@ export default function save( { attributes } ) {
 		<section { ...blockProps }>
 			<HeroBackdrop />
 
-			<div className="saas-hero__inner">
+			<div className="relative mx-auto grid max-w-content items-center gap-14 px-section py-20 pb-24 lg:grid-cols-2 lg:pt-28">
 				<HeroContentSave
 					eyebrow={ eyebrow }
 					heading={ heading }

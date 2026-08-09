@@ -4,7 +4,9 @@
   "description": "",
   "scripts": {
     "start": "wp-scripts start",
-    "build": "wp-scripts build"
+    "start:css": "bunx @tailwindcss/cli -i ./src/css/theme.css -o ./assets/css/theme.css --watch",
+    "build": "wp-scripts build && bun run build:css",
+    "build:css": "bunx @tailwindcss/cli -i ./src/css/theme.css -o ./assets/css/theme.css --minify"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,9 @@
   },
   "homepage": "https://github.com/himibaba10/saas-block-theme#readme",
   "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
     "@wordpress/blocks": "^15.25.0",
-    "@wordpress/scripts": "^34.0.0"
+    "@wordpress/scripts": "^34.0.0",
+    "tailwindcss": "^4.3.3"
   }
 }
