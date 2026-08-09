@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "saas-block-theme/faq-section",
+  "version": "1.0.0",
+  "title": "FAQ Section",
+  "category": "theme",
+  "icon": "editor-ul",
+  "description": "Locked-design FAQ section. Clients can edit content only.",
+  "keywords": ["faq", "section", "faq-section"],
+  "textdomain": "saas-block-theme",
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Frequently Asked Questions"
+    },
+    "faqs": {
+      "type": "array",
+      "default": [
+        {
+          "question": "What is Nebulark?",
+          "answer": "Nebulark is a platform that helps you manage your business operations."
+        }
+      ]
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["full"],
+    "anchor": true,
+    "spacing": {
+      "margin": true,
+      "padding": false
+    },
+    "color": {
+      "background": true,
+      "text": false
+    },
+    "typography": false
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css"
+}
