@@ -17,6 +17,8 @@ define('SAAS_THEME_DIR', get_template_directory());
 $saas_theme_includes = array(
 	'/inc/assets.php',
 	'/inc/blocks.php',
+	'/inc/custom-post-types.php',
+	'/inc/icons.php',
 	'/inc/navigation.php',
 	'/inc/seed.php',
 );

@@ -1,4 +1,6 @@
-import { registerBlockStyle, registerBlockVariation } from '@wordpress/blocks';
+import { registerBlockVariation } from '@wordpress/blocks';
+import './group-overflow';
+import './paragraph-max-width';
 
 const primaryButtonAttributes = {
   className: 'btn-primary',
@@ -20,6 +22,54 @@ const primaryButtonAttributes = {
   },
   metadata: {
     name: 'Primary Button',
+  },
+};
+
+const secondaryButtonAttributes = {
+  className: 'btn-secondary',
+  backgroundColor: 'surface',
+  textColor: 'dark',
+  fontSize: 'small',
+  style: {
+    border: {
+      radius: 'var:preset|border-radius|full',
+      width: '1px',
+    },
+    spacing: {
+      padding: {
+        top: 'var:preset|spacing|25',
+        bottom: 'var:preset|spacing|25',
+        left: 'var:preset|spacing|50',
+        right: 'var:preset|spacing|50',
+      },
+    },
+  },
+  metadata: {
+    name: 'Secondary Button',
+  },
+};
+
+const accentButtonAttributes = {
+  className: 'btn-accent',
+  backgroundColor: 'spark',
+  textColor: 'dark',
+  fontSize: 'small',
+  style: {
+    border: {
+      radius: 'var:preset|border-radius|full',
+      width: '1px',
+    },
+    spacing: {
+      padding: {
+        top: 'var:preset|spacing|25',
+        bottom: 'var:preset|spacing|25',
+        left: 'var:preset|spacing|50',
+        right: 'var:preset|spacing|50',
+      },
+    },
+  },
+  metadata: {
+    name: 'Accent Button',
   },
 };
 
@@ -77,11 +127,6 @@ registerBlockVariation('core/paragraph', {
   scope: ['inserter', 'transform', 'block'],
 });
 
-registerBlockStyle('core/paragraph', {
-  name: 'compact',
-  label: 'Compact',
-});
-
 registerBlockVariation('core/button', {
   name: 'button-primary',
   title: 'Button - Primary',
@@ -91,6 +136,30 @@ registerBlockVariation('core/button', {
   isDefault: true,
   isActive: (blockAttributes) =>
     blockAttributes.className?.split(/\s+/).includes('btn-primary'),
+  scope: ['inserter', 'transform', 'block'],
+});
+
+registerBlockVariation('core/button', {
+  name: 'button-secondary',
+  title: 'Button - Secondary',
+  description: 'A Secondary call-to-action button.',
+  icon: 'button',
+  attributes: secondaryButtonAttributes,
+  isDefault: true,
+  isActive: (blockAttributes) =>
+    blockAttributes.className?.split(/\s+/).includes('btn-secondary'),
+  scope: ['inserter', 'transform', 'block'],
+});
+
+registerBlockVariation('core/button', {
+  name: 'button-accent',
+  title: 'Button - Accent',
+  description: 'An Accent call-to-action button.',
+  icon: 'button',
+  attributes: accentButtonAttributes,
+  isDefault: true,
+  isActive: (blockAttributes) =>
+    blockAttributes.className?.split(/\s+/).includes('btn-accent'),
   scope: ['inserter', 'transform', 'block'],
 });
 

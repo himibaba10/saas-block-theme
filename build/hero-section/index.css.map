@@ -1,1 +1,0 @@
-{"version":3,"file":"hero-section/index.css","mappings":";;;AAAA;CACC,aAAa;AACd","sources":["webpack://saas-block-theme/./src/hero-section/editor.css"],"sourcesContent":[".saas-hero .block-editor-rich-text__editable {\r\n\toutline: none;\r\n}\r\n"],"names":[],"sourceRoot":""}

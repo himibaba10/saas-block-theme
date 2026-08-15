@@ -82,6 +82,11 @@
 					"slug": "dark"
 				},
 				{
+					"color": "#ebf2f3",
+					"name": "Light Blue",
+					"slug": "light-blue"
+				},
+				{
 					"color": "rgba(26, 26, 28, 0.1)",
 					"name": "Border",
 					"slug": "border"
@@ -381,8 +386,22 @@
 					"text": "var(--wp--preset--color--muted)"
 				},
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--medium)",
-					"lineHeight": "26px"
+					"fontSize": "16px",
+					"lineHeight": "24px"
+				},
+				"variations": {
+					"small": {
+						"typography": {
+							"fontSize": "14px",
+							"lineHeight": "20px"
+						}
+					},
+					"large": {
+						"typography": {
+							"fontSize": "18px",
+							"lineHeight": "26px"
+						}
+					}
 				}
 			},
 			"core/quote": {
