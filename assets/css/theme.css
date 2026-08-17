@@ -58,6 +58,9 @@
   .static {
     position: static;
   }
+  .sticky {
+    position: sticky;
+  }
   .-inset-6 {
     inset: calc(var(--spacing) * -6);
   }
