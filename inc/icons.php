@@ -25,7 +25,7 @@ function saas_theme_get_lucide_icons(): array
 
 function saas_theme_get_lucide_svg(string $slug): string
 {
-	$file_path = SAAS_THEME_DIR . '/assets/icons/lucide/' . $slug . '.svg';
+	$file_path = SAAS_THEME_DIR . "/assets/icons/lucide/$slug.svg";
 
 	if (!is_readable($file_path)) {
 		return '';
