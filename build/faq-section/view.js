@@ -1,1 +1,46 @@
-(()=>{const e=(e=document)=>{e.querySelectorAll(".saas-faq").forEach(e=>{"true"!==e.dataset.faqReady&&(e.dataset.faqReady="true",e.addEventListener("click",t=>{const a=t.target.closest(".saas-faq__trigger");if(!a||!e.contains(a))return;const s=a.closest(".saas-faq__item");if(!s)return;const r=!s.classList.contains("is-open");e.querySelectorAll(".saas-faq__item.is-open").forEach(e=>{if(e===s)return;e.classList.remove("is-open");const t=e.querySelector(".saas-faq__trigger"),a=e.querySelector(".saas-faq__panel");t?.setAttribute("aria-expanded","false"),a?.setAttribute("aria-hidden","true")}),s.classList.toggle("is-open",r),a.setAttribute("aria-expanded",String(r)),s.querySelector(".saas-faq__panel")?.setAttribute("aria-hidden",String(!r))}))})};"loading"===document.readyState?document.addEventListener("DOMContentLoaded",()=>e()):e()})();
+/******/ (() => { // webpackBootstrap
+/*!*********************************!*\
+  !*** ./src/faq-section/view.js ***!
+  \*********************************/
+(() => {
+  const initFaqAccordion = (root = document) => {
+    root.querySelectorAll('.saas-faq').forEach(faq => {
+      if (faq.dataset.faqReady === 'true') {
+        return;
+      }
+      faq.dataset.faqReady = 'true';
+      faq.addEventListener('click', event => {
+        const trigger = event.target.closest('.saas-faq__trigger');
+        if (!trigger || !faq.contains(trigger)) {
+          return;
+        }
+        const item = trigger.closest('.saas-faq__item');
+        if (!item) {
+          return;
+        }
+        const willOpen = !item.classList.contains('is-open');
+        faq.querySelectorAll('.saas-faq__item.is-open').forEach(openItem => {
+          if (openItem === item) {
+            return;
+          }
+          openItem.classList.remove('is-open');
+          const openTrigger = openItem.querySelector('.saas-faq__trigger');
+          const openPanel = openItem.querySelector('.saas-faq__panel');
+          openTrigger?.setAttribute('aria-expanded', 'false');
+          openPanel?.setAttribute('aria-hidden', 'true');
+        });
+        item.classList.toggle('is-open', willOpen);
+        trigger.setAttribute('aria-expanded', String(willOpen));
+        item.querySelector('.saas-faq__panel')?.setAttribute('aria-hidden', String(!willOpen));
+      });
+    });
+  };
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => initFaqAccordion());
+  } else {
+    initFaqAccordion();
+  }
+})();
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

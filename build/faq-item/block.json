@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "saas-block-theme/faq-item",
+  "version": "1.0.0",
+  "title": "FAQ Item",
+  "category": "theme",
+  "icon": "editor-help",
+  "description": "A single FAQ question and answer.",
+  "keywords": [
+    "faq",
+    "item",
+    "question"
+  ],
+  "textdomain": "saas-block-theme",
+  "parent": [
+    "saas-block-theme/faq-section"
+  ],
+  "attributes": {
+    "question": {
+      "type": "string",
+      "default": ""
+    },
+    "answer": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "reusable": false,
+    "lock": false
+  },
+  "editorScript": "file:./index.js"
+}

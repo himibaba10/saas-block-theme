@@ -7,47 +7,49 @@
 
 declare(strict_types=1);
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
 /**
  * Ensure site title matches brand once.
  */
-function saas_theme_maybe_set_brand_title(): void {
-	if ( get_option( 'saas_theme_brand_seeded' ) ) {
+function saas_theme_maybe_set_brand_title(): void
+{
+	if (get_option('saas_theme_brand_seeded')) {
 		return;
 	}
 
-	if ( 'Reactive SaaS' !== get_option( 'blogname' ) ) {
-		update_option( 'blogname', 'Reactive SaaS' );
+	if ('Reactive SaaS' !== get_option('blogname')) {
+		update_option('blogname', 'Reactive SaaS');
 	}
 
-	update_option( 'saas_theme_brand_seeded', 1 );
+	update_option('saas_theme_brand_seeded', 1);
 }
-add_action( 'init', 'saas_theme_maybe_set_brand_title', 5 );
+add_action('init', 'saas_theme_maybe_set_brand_title', 5);
 
 /**
  * Seed a synced CTA pattern with pattern overrides.
  */
-function saas_theme_maybe_seed_synced_cta(): void {
-	if ( get_option( 'saas_theme_cta_synced' ) ) {
+function saas_theme_maybe_seed_synced_cta(): void
+{
+	if (get_option('saas_theme_cta_synced')) {
 		return;
 	}
 
 	$existing = get_posts(
 		array(
-			'post_type'      => 'wp_block',
-			'post_status'    => 'publish',
-			'name'           => 'cta-band',
+			'post_type' => 'wp_block',
+			'post_status' => 'publish',
+			'name' => 'cta-band',
 			'posts_per_page' => 1,
-			'fields'         => 'ids',
+			'fields' => 'ids',
 		)
 	);
 
-	if ( ! empty( $existing ) ) {
-		update_option( 'saas_theme_cta_synced', 1 );
-		update_option( 'saas_theme_cta_id', (int) $existing[0] );
+	if (!empty($existing)) {
+		update_option('saas_theme_cta_synced', 1);
+		update_option('saas_theme_cta_id', (int) $existing[0]);
 		return;
 	}
 
@@ -77,19 +79,19 @@ HTML;
 
 	$post_id = wp_insert_post(
 		array(
-			'post_title'   => 'CTA Band',
-			'post_name'    => 'cta-band',
-			'post_status'  => 'publish',
-			'post_type'    => 'wp_block',
+			'post_title' => 'CTA Band',
+			'post_name' => 'cta-band',
+			'post_status' => 'publish',
+			'post_type' => 'wp_block',
 			'post_content' => $content,
 		),
 		true
 	);
 
-	if ( ! is_wp_error( $post_id ) ) {
-		update_post_meta( $post_id, 'wp_pattern_sync_status', '' );
-		update_option( 'saas_theme_cta_synced', 1 );
-		update_option( 'saas_theme_cta_id', (int) $post_id );
+	if (!is_wp_error($post_id)) {
+		update_post_meta($post_id, 'wp_pattern_sync_status', '');
+		update_option('saas_theme_cta_synced', 1);
+		update_option('saas_theme_cta_id', (int) $post_id);
 	}
 }
-add_action( 'init', 'saas_theme_maybe_seed_synced_cta', 22 );
+add_action('init', 'saas_theme_maybe_seed_synced_cta', 22);

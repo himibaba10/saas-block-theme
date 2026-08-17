@@ -49,3 +49,7 @@
 svg {
   transition: all 0.2s ease-in-out;
 }
+
+.saas-faq__inner .saas-faq__item + .saas-faq__item {
+  margin-top: 1rem;
+}

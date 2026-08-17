@@ -390,16 +390,16 @@
 					"lineHeight": "24px"
 				},
 				"variations": {
-					"small": {
-						"typography": {
-							"fontSize": "14px",
-							"lineHeight": "20px"
-						}
-					},
 					"large": {
 						"typography": {
 							"fontSize": "18px",
 							"lineHeight": "26px"
+						}
+					},
+					"small": {
+						"typography": {
+							"fontSize": "14px",
+							"lineHeight": "20px"
 						}
 					}
 				}

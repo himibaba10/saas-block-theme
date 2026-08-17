@@ -15,6 +15,7 @@ function saas_theme_register_blocks(): void
 	$blocks = [
 		SAAS_THEME_DIR . '/build/hero-section',
 		SAAS_THEME_DIR . '/build/faq-section',
+		SAAS_THEME_DIR . '/build/faq-item',
 		SAAS_THEME_DIR . '/build/case-studies',
 	];
 

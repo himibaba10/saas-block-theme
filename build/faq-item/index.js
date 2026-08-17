@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/faq-section/edit.js"
-/*!*********************************!*\
-  !*** ./src/faq-section/edit.js ***!
-  \*********************************/
+/***/ "./src/faq-item/edit.js"
+/*!******************************!*\
+  !*** ./src/faq-item/edit.js ***!
+  \******************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -14,46 +14,64 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
 /* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
 
 
-const ALLOWED_BLOCKS = ['core/heading', 'core/paragraph', 'saas-block-theme/faq-item'];
-const HEADING_CLASS = 'mt-0 mb-10 text-[clamp(2rem,1.5rem+2vw,3rem)] font-semibold tracking-[-0.03em] text-ink';
-const TEMPLATE = [['core/heading', {
-  level: 2,
-  content: 'Frequently Asked Questions',
-  className: HEADING_CLASS
-}], ['saas-block-theme/faq-item', {
-  question: 'What is Nebulark?',
-  answer: 'Nebulark is a platform that helps you manage your business operations.'
-}]];
-function Edit() {
+
+function FaqToggleIcon() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+    className: "saas-faq__icon flex size-8 shrink-0 items-center justify-center rounded-full border border-border text-2xl text-ink transition-transform duration-300 ease-out group-[.is-open]:rotate-45",
+    "aria-hidden": "true",
+    children: "+"
+  });
+}
+function Edit({
+  attributes,
+  setAttributes
+}) {
+  const {
+    question,
+    answer
+  } = attributes;
   const blockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps)({
-    className: 'saas-faq'
+    className: 'saas-faq__item relative rounded-2xl border border-border-soft bg-surface px-6 py-5'
   });
-  const innerBlockProps = (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps)({
-    className: 'saas-faq__inner relative mx-auto max-w-content px-section py-20'
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     ...blockProps,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      ...innerBlockProps,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks, {
-        allowedBlocks: ALLOWED_BLOCKS,
-        template: TEMPLATE,
-        templateLock: false
-      })
-    })
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+      className: "flex items-start justify-between gap-4",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+        tagName: "h3",
+        className: "m-0 text-large font-semibold text-ink",
+        value: question,
+        onChange: value => setAttributes({
+          question: value
+        }),
+        placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Question…', 'saas-block-theme'),
+        allowedFormats: []
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(FaqToggleIcon, {})]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText, {
+      tagName: "p",
+      className: "mt-3 mb-0 max-w-3xl text-[1.125rem] leading-6.5 text-muted",
+      value: answer,
+      onChange: value => setAttributes({
+        answer: value
+      }),
+      placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Answer…', 'saas-block-theme'),
+      allowedFormats: []
+    })]
   });
 }
 
 /***/ },
 
-/***/ "./src/faq-section/save.js"
-/*!*********************************!*\
-  !*** ./src/faq-section/save.js ***!
-  \*********************************/
+/***/ "./src/faq-item/save.js"
+/*!******************************!*\
+  !*** ./src/faq-item/save.js ***!
+  \******************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
@@ -66,19 +84,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
 
 
-function save() {
+function FaqToggleIcon() {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+    className: "saas-faq__icon flex size-8 shrink-0 items-center justify-center rounded-full border border-border text-2xl text-ink transition-transform duration-300 ease-out group-[.is-open]:rotate-45",
+    "aria-hidden": "true",
+    children: "+"
+  });
+}
+function save({
+  attributes
+}) {
+  const {
+    question,
+    answer
+  } = attributes;
   const blockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useBlockProps.save({
-    className: 'saas-faq'
+    className: 'saas-faq__item group rounded-2xl border border-border-soft bg-surface px-6 py-5'
   });
-  const innerBlockProps = _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.useInnerBlocksProps.save({
-    className: 'saas-faq__inner relative mx-auto max-w-content px-section py-20'
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("section", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
     ...blockProps,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      ...innerBlockProps,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.InnerBlocks.Content, {})
-    })
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h3", {
+      className: "m-0",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("button", {
+        type: "button",
+        className: "saas-faq__trigger flex w-full cursor-pointer items-center justify-between gap-4 border-0 bg-transparent p-0 text-left",
+        "aria-expanded": "false",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+          tagName: "span",
+          className: "text-large font-semibold text-ink",
+          value: question
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(FaqToggleIcon, {})]
+      })
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+      className: "saas-faq__panel grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 ease-out group-[.is-open]:grid-rows-[1fr]",
+      "aria-hidden": "true",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "saas-faq__panel-inner min-h-0 overflow-hidden",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+          tagName: "p",
+          className: "mt-3 mb-0 max-w-3xl text-[1.125rem] leading-6.5 text-muted",
+          value: answer
+        })
+      })
+    })]
   });
 }
 
@@ -114,13 +162,23 @@ module.exports = window["wp"]["blocks"];
 
 /***/ },
 
-/***/ "./src/faq-section/block.json"
-/*!************************************!*\
-  !*** ./src/faq-section/block.json ***!
-  \************************************/
+/***/ "@wordpress/i18n"
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
 (module) {
 
-module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"saas-block-theme/faq-section","version":"1.0.0","title":"FAQ Section","category":"theme","icon":"editor-ul","description":"Locked-design FAQ section. Clients can edit content only.","keywords":["faq","section","faq-section"],"textdomain":"saas-block-theme","supports":{"html":false,"align":["full"],"anchor":true,"spacing":{"margin":true,"padding":false},"color":{"background":true,"text":false},"typography":false},"editorScript":"file:./index.js","viewScript":"file:./view.js"}');
+module.exports = window["wp"]["i18n"];
+
+/***/ },
+
+/***/ "./src/faq-item/block.json"
+/*!*********************************!*\
+  !*** ./src/faq-item/block.json ***!
+  \*********************************/
+(module) {
+
+module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":3,"name":"saas-block-theme/faq-item","version":"1.0.0","title":"FAQ Item","category":"theme","icon":"editor-help","description":"A single FAQ question and answer.","keywords":["faq","item","question"],"textdomain":"saas-block-theme","parent":["saas-block-theme/faq-section"],"attributes":{"question":{"type":"string","default":""},"answer":{"type":"string","default":""}},"supports":{"html":false,"reusable":false,"lock":false},"editorScript":"file:./index.js"}');
 
 /***/ }
 
@@ -216,15 +274,15 @@ module.exports = /*#__PURE__*/JSON.parse('{"$schema":"https://schemas.wp.org/tru
 let __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be isolated against other modules in the chunk.
 (() => {
-/*!**********************************!*\
-  !*** ./src/faq-section/index.js ***!
-  \**********************************/
+/*!*******************************!*\
+  !*** ./src/faq-item/index.js ***!
+  \*******************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
 /* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./src/faq-section/block.json");
-/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/faq-section/edit.js");
-/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/faq-section/save.js");
+/* harmony import */ var _block_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./block.json */ "./src/faq-item/block.json");
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./edit */ "./src/faq-item/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./save */ "./src/faq-item/save.js");
 
 
 

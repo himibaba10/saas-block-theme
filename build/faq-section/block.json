@@ -13,21 +13,6 @@
     "faq-section"
   ],
   "textdomain": "saas-block-theme",
-  "attributes": {
-    "heading": {
-      "type": "string",
-      "default": "Frequently Asked Questions"
-    },
-    "faqs": {
-      "type": "array",
-      "default": [
-        {
-          "question": "What is Nebulark?",
-          "answer": "Nebulark is a platform that helps you manage your business operations."
-        }
-      ]
-    }
-  },
   "supports": {
     "html": false,
     "align": [
