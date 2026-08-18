@@ -537,12 +537,9 @@ const accentButtonAttributes = {
           right: 'var:preset|spacing|section'
         }
       }
-    },
-    layout: {
-      type: 'constrained'
     }
   },
-  isActive: ['tagName', 'className'],
+  isActive: blockAttributes => blockAttributes.tagName === 'section' && blockAttributes.className?.split(/\s+/).includes('group-section'),
   scope: ['inserter', 'transform']
 });
 (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__.registerBlockVariation)('core/paragraph', {

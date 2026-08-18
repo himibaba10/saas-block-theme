@@ -89,9 +89,10 @@ registerBlockVariation('core/group', {
         },
       },
     },
-    layout: { type: 'constrained' },
   },
-  isActive: ['tagName', 'className'],
+  isActive: (blockAttributes) =>
+    blockAttributes.tagName === 'section' &&
+    blockAttributes.className?.split(/\s+/).includes('group-section'),
   scope: ['inserter', 'transform'],
 });
 

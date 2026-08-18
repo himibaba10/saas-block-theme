@@ -115,6 +115,15 @@
 			"contentSize": "1170px",
 			"wideSize": "1400px"
 		},
+		"blocks": {
+			"core/group": {
+				"layout": {
+					"allowSwitching": true,
+					"allowInheriting": true,
+					"allowCustomContentAndWideSize": true
+				}
+			}
+		},
 		"shadow": {
 			"defaultPresets": false,
 			"presets": [

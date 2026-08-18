@@ -9,6 +9,7 @@
 @source "../../parts";
 @source "../../patterns";
 @source "../../src";
+@source "../../../../plugins/saas-blocks/src";
 
 @theme {
   --color-background: var(--wp--preset--color--background);

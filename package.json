@@ -21,12 +21,7 @@
   "homepage": "https://github.com/himibaba10/saas-block-theme#readme",
   "devDependencies": {
     "@tailwindcss/cli": "^4.3.3",
-    "@wordpress/blocks": "^15.25.0",
     "@wordpress/scripts": "^34.0.0",
     "tailwindcss": "^4.3.3"
-  },
-  "dependencies": {
-    "embla-carousel": "^8.6.0",
-    "embla-carousel-react": "^8.6.0"
   }
 }
